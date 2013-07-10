@@ -3,10 +3,9 @@ var fs = require('fs');
 var buf = new Buffer(50);
 
 
-fs.readFile('./index.html', function(err, buf) {
-  if (err) throw err;
-  console.log(buf);
-});
+var buf = fs.readFileSync('./index.html', 'utf8');
+console.log(buf);
+
 
 var app = express.createServer(express.logger());
 
