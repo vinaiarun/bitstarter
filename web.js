@@ -3,12 +3,10 @@ var fs = require('fs');
 var buf = new Buffer(50);
 
 
-fs.readfile('./index.html', function(err, buf) {
+fs.readFile('./index.html', function(err, buf) {
   if (err) throw err;
-  console.log(data);
+  console.log(buf);
 });
-
-
 
 var app = express.createServer(express.logger());
 
